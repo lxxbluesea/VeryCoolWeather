@@ -5,7 +5,7 @@ package com.example.verycoolweather.model;
  */
 public class County {
     int id,cityId;
-    String countName,countCode;
+    String countyName,countyCode;
 
     public int getId() {
         return id;
@@ -23,19 +23,19 @@ public class County {
         this.cityId = cityId;
     }
 
-    public String getCountName() {
-        return countName;
+    public String getCountyName() {
+        return countyName;
     }
 
-    public void setCountName(String countName) {
-        this.countName = countName;
+    public void setCountyName(String countyName) {
+        this.countyName = countyName;
     }
 
-    public String getCountCode() {
-        return countCode;
+    public String getCountyCode() {
+        return countyCode;
     }
 
-    public void setCountCode(String countCode) {
-        this.countCode = countCode;
+    public void setCountyCode(String countyCode) {
+        this.countyCode = countyCode;
     }
 }
