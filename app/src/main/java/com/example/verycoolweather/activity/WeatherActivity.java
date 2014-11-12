@@ -11,6 +11,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.verycoolweather.R;
+import com.example.verycoolweather.receiver.AutoUpdateReceiver;
+import com.example.verycoolweather.service.AutoUpdateService;
 import com.example.verycoolweather.util.BaseActivity;
 import com.example.verycoolweather.util.HttpCallbackListener;
 import com.example.verycoolweather.util.HttpUtil;
@@ -168,5 +170,8 @@ public class WeatherActivity extends BaseActivity {
         currentDate_tv.setText(preferences.getString("current_date",""));
         weatherInfo_Layout.setVisibility(View.VISIBLE);
         cityName_tv.setVisibility(View.VISIBLE);
+
+        Intent intent=new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 }
