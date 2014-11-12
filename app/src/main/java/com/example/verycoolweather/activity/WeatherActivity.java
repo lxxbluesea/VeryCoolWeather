@@ -92,7 +92,7 @@ public class WeatherActivity extends BaseActivity {
     void queryWeatherCode(String countyCode)
     {
         String address="http://www.weather.com.cn/data/list3/city"+countyCode+".xml";
-        LogUtil.d("WeatherActivity",address);
+        LogUtil.d("com.example.verycoolweather",address);
         queryFromServer(address,"countyCode");
     }
 
@@ -103,7 +103,7 @@ public class WeatherActivity extends BaseActivity {
     void queryWeatherInfo(String weatherCode)
     {
         String address="http://www.weather.com.cn/data/cityinfo/"+weatherCode+".html";
-        LogUtil.d("WeatherActivity",address);
+        LogUtil.d("com.example.verycoolweather",address);
         queryFromServer(address,"weatherCode");
     }
 
@@ -160,7 +160,7 @@ public class WeatherActivity extends BaseActivity {
     {
         SharedPreferences preferences=PreferenceManager.getDefaultSharedPreferences(this);
         cityName_tv.setText(preferences.getString("city_name",""));
-        LogUtil.d("WeatherActivity",cityName_tv.getText().toString());
+        LogUtil.d("com.example.verycoolweather",cityName_tv.getText().toString());
         temp1_tv.setText(preferences.getString("temp1",""));
         temp2_tv.setText(preferences.getString("temp2",""));
         weatherDesp_tv.setText(preferences.getString("weather_desp",""));
